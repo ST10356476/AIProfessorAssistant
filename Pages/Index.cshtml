@@ -1,0 +1,53 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "AI Professor Assistant";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/index.css">
+</head>
+<body>
+    <header>
+        <h1>@ViewData["Title"]</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Search for Information</h2>
+            <form method="post">
+                <label for="query">Enter Professor's Name or Query:</label>
+                <input type="text" id="query" name="query" required placeholder="e.g., George Steward, Recent Research">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        @if (Model.Response != null)
+        {
+            <section class="response-section">
+                <h2>Response:</h2>
+                <p>@Model.Response</p>
+            </section>
+        }
+
+        <section class="info-section">
+            <h2>Additional Information</h2>
+            <p>This AI Professor Assistant is designed to provide detailed information and insights based on your queries. Enter the professor's name or any related query to receive relevant information.</p>
+            <ul>
+                <li><strong>Feature 1:</strong> Quick and accurate responses based on the latest research.</li>
+                <li><strong>Feature 2:</strong> Comprehensive data retrieval from various sources.</li>
+                <li><strong>Feature 3:</strong> User-friendly interface for seamless interaction.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AI Professor Assistant. All rights reserved.</p>
+    </footer>
+</body>
+</html>
