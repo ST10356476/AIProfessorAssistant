@@ -96,4 +96,4 @@ If you have questions or need further assistance, feel free to open an issue in 
 - Extend support for mobile platforms.
 ```
 
-Feel free to modify this template to match your project's specific details and goals! 😊
+Feel free to modify this to match your project's specific details and goals! 😊
